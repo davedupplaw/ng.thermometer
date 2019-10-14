@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ng-thermometer": {
+      "root": "projects/ng-thermometer",
+      "sourceRoot": "projects/ng-thermometer/src",
+      "projectType": "library",
+      "prefix": "dd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-thermometer/tsconfig.lib.json",
+            "project": "projects/ng-thermometer/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-thermometer/src/test.ts",
+            "tsConfig": "projects/ng-thermometer/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-thermometer/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-thermometer/tsconfig.lib.json",
+              "projects/ng-thermometer/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-thermometer-app"

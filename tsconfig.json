@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-thermometer": [
+        "dist/ng-thermometer"
+      ],
+      "ng-thermometer/*": [
+        "dist/ng-thermometer/*"
+      ]
+    }
   }
 }
